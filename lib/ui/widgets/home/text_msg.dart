@@ -59,6 +59,9 @@ class _TextMsgState extends State<TextMsg> {
               ),
               IconButton(
                   onPressed: () async {
+                    if (msg.text.isEmpty) {
+                      return;
+                    }
                     var data = AppResponse(user: Users.user, detail: msg.text);
                     appGemini.addItem(data);
                     appGemini.generateResponse(msg.text);

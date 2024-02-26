@@ -38,7 +38,9 @@ class BoldTextParser extends StatelessWidget {
     }
 
     return RichText(
-      text: TextSpan(children: children, style: const TextStyle(fontSize: 16)),
+      text: TextSpan(
+          children: children,
+          style: const TextStyle(fontSize: 16, color: Colors.white)),
     );
   }
 }
